@@ -1,17 +1,13 @@
 #!/usr/bin/python3
 lower = "abcdefghijklmnopqrstuvwxyz"
-upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def uppercase(string):
-    index = 0
+    length = 1
+    result = ''
     for value in string:
-        if (value in lower):
-            while lower[index] != value:
-                index += 1
-            print("{}".format(upper[index]), end="")
+        if value in lower:
+            result += chr(ord(value) - 32)
         else:
-            print("{}".format(value), end="")
-        index = 0
-    else:
-        print("")
+            result += value
+    print(result)
