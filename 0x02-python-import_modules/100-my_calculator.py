@@ -22,7 +22,7 @@ if __name__ == "__main__":
     elif argv[2] == '-':
         result = sub(a, b)
         print("{} {} {} = {}".format(argv[1], argv[2], argv[3], result))
-    elif argv[2] in ['*', '\*']:
+    elif argv[2] == '*':
         result = mul(a, b)
         print("{} {} {} = {}".format(argv[1], argv[2], argv[3], result))
     else:
