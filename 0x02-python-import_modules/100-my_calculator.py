@@ -6,10 +6,10 @@ from calculator_1 import add, sub, mul, div
 
 args = len(argv) - 1
 operators = ['+', '-', '*', '/']
-a = int(argv[1])
-b = int(argv[3])
 
 if __name__ == "__main__":
+    a = int(argv[1])
+    b = int(argv[3])
     if args != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     elif argv[2] == '-':
         result = sub(a, b)
         print("{} {} {} = {}".format(argv[1], argv[2], argv[3], result))
-    elif argv[2] == '*':
+    elif argv[2] in ['*', '\*']:
         result = mul(a, b)
         print("{} {} {} = {}".format(argv[1], argv[2], argv[3], result))
     else:
