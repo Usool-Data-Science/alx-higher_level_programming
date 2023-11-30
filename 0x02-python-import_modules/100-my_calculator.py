@@ -2,14 +2,18 @@
 import sys
 from sys import argv
 
+from decimal import Decimal, getcontext
+
 from calculator_1 import add, sub, mul, div
 
+getcontext().prec = 999
 args = len(argv) - 1
 operators = ['+', '-', '*', '/']
 
 if __name__ == "__main__":
-    a = int(argv[1])
-    b = int(argv[3])
+    a = Decimal(argv[1])
+    b = Decimal(argv[3])
+
     if args != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
