@@ -26,4 +26,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
         except IndexError as e:
             b = 0
         result.append(a + b)
-    return(tuple(result))
+    return (tuple(result))
