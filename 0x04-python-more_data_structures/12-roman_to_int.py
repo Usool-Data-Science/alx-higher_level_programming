@@ -6,11 +6,14 @@
 
 
 def roman_to_int(roman_string):
-    roman_dict = dict(
-            I=1, II=2, III=3, IV=4, V=5,
-            VI=6, VII=7, VIII=8, IX=9, X=10,
-            L=50, C=100, D=500, M=1000)
+    roman_dict = {
+            'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5,
+            'VI': 6, 'VII': 7, 'VIII': 8, 'IX': 9, 'X': 10,
+            'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     result = 0
+    if not roman_string or not isinstance(roman_string, str):
+        return (result)
+
     if roman_string in list(roman_dict):
         result += roman_dict[roman_string]
     else:
