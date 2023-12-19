@@ -5,7 +5,8 @@ It defines template for creating a square
 
 
 class Square(object):
-    """
+    """A blueprint for a square.
+        It defines the template for creating a square.
     """
     def __init__(self, size=0):
         """Initialize a square instance.
