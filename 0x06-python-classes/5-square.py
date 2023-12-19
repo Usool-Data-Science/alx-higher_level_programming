@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 """A blueprint for a square.
 It defines template for creating a square
 """
@@ -47,10 +48,10 @@ class Square(object):
         """This is a Square printer
             It prints a square shape with `#`
         """
-        if self.__size:
+        if self.__size > 0:
             for i in range(self.__size):
                 for j in range(self.__size):
-                    print("#", end="")
+                    print("#", end="", file=sys.stdout)
                 print("")
         else:
-             print("")
+            print("")
