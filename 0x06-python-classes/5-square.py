@@ -47,7 +47,10 @@ class Square(object):
         """This is a Square printer
             It prints a square shape with `#`
         """
-        for i in range(self.__size):
-            for j in range(self.__size):
-                print("#", end="")
-            print("")
+        if self.__size:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print("")
+        else:
+             print("")
