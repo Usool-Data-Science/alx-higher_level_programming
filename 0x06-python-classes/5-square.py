@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 """A blueprint for a square.
 It defines template for creating a square
 """
@@ -51,7 +50,7 @@ class Square(object):
         if self.__size > 0:
             for i in range(self.__size):
                 for j in range(self.__size):
-                    print("#", end="", file=sys.stdout)
-                print("")
+                    print("{}".format("#"), end="")
+                print("{}".format(""))
         else:
-            print("")
+            print("{}".format(""))
