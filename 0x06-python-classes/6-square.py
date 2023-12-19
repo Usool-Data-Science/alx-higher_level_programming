@@ -72,7 +72,7 @@ class Square(object):
             It prints a square shape with `#`
         """
         if self.__size > 0:
-            [print("{}".format("")) for i in range(0, self.__position[1])]
+            [print("") for j in range (0, self.__position[1])]
             for i in range(self.__size):
                 print("{}".format('_' * self.__position[0]), end="")
                 print("{}".format('#' * self.__size), end="")
