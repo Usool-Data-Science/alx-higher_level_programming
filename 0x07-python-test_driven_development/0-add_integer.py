@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 A function that adds 2 integers
+The first integer must be an int
+And also the second integer must be an int
 """
 
 
