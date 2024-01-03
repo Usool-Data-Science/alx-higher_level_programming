@@ -1,0 +1,36 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+#GOOD CASES
+>>> goodstring1 = "Hello. How are you doing? I mean: today or yesterday"
+>>> goodstring2 = "Please come back      "
+>>> goodstring3 = ""
+>>> goodstring4 = "123"
+
+#EDGE CASES
+>>> badstring1 = 345
+>>> badstring2 = None
+
+>>> text_indentation(goodstring1)
+Hello.
+<BLANKLINE>
+ How are you doing?
+<BLANKLINE>
+ I mean:
+<BLANKLINE>
+ today or yesterday
+
+>>> text_indentation(goodstring2)
+Please come back
+
+>>> text_indentation(goodstring3)
+
+>>> text_indentation(goodstring4)
+123
+
+>>> text_indentation(badstring1)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(badstring2)
+Traceback (most recent call last):
+TypeError: text must be a string
