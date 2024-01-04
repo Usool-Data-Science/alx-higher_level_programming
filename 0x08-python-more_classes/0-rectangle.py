@@ -3,6 +3,7 @@
 A class module that creates a rectangle class
 """
 
+
 class Rectangle(object):
     """
     A class for creating an empty rectangle object
@@ -12,4 +13,3 @@ class Rectangle(object):
         An instantiator function for each instance
         """
         pass
-
