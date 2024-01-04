@@ -39,7 +39,8 @@ class Rectangle(object):
         """
         Official representation of the string.
         """
-        return "{}({}, {})".format((type(self).__name__), self.__width, self.__height)
+        return "{}({}, {})".format(
+            (type(self).__name__), self.__width, self.__height)
 
     def __del__(self):
         """
