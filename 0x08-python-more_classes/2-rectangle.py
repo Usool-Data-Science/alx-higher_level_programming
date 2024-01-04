@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 """
-A module for defining the blue-print of a rectangle object
+A module for calculating area and perimeter
 """
 
 
 class Rectangle(object):
     """
-    A rectangle blue-print for defining other
-    rectangles.
+    A blue-print for calculating area and perimeter
     """
     def __init__(self, width=0, height=0):
         """
-        An instantiator for each object instance.
+        Initialize an instance upon every call.
         Args:
-            width (int): The width of the object.
-            height (int): The height of the object.
+            widht (int): The width of the rectangle
+            height (int): The height of the rectangle
+        Return: None
         """
         self.width = width
         self.height = height
@@ -22,16 +22,16 @@ class Rectangle(object):
     @property
     def width(self):
         """
-        Declares the width as a private attribute.
+        Privatize the attribute width
         Return:
-            A private value for width.
+            A private width attribute
         """
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Set predefined condition(s) for the width attribute.
+        Declare some predefined set of rules for width
         """
         if not (isinstance(value, int)):
             raise TypeError("width must be an integer")
@@ -43,20 +43,35 @@ class Rectangle(object):
     @property
     def height(self):
         """
-        Declares the height as a private attributes.
+        Privatize the attribute height
         Return:
-            A private attribute for height.
+            A private height attribute
         """
         return self.__height
 
     @height.setter
     def height(self, value):
         """
-        Set predefined condition(s) for the height attribute.
+        Declare some predefined set of rules for height.
         """
         if not (isinstance(value, int)):
             raise TypeError("height must be an integer")
-        elif (value < 0):
+        elif value < 0:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def area(self):
+        """
+        Computes the area of the rectangle
+        """
+        return self.height * self.width
+
+    def perimeter(self):
+        """
+        Computes the perimeter of the rectangle
+        """
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return 2 * (self.width + self.height)
