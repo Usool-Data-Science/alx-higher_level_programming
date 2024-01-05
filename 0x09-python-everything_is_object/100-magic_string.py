@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-time = 1
-def magic_string(n):
-    time += 1, print("Best")
+def magic_string(iteration=[-1]):
+    iteration[0] += 1
+    return ("BestSchool" + (", BestSchool" * iteration[0]))
