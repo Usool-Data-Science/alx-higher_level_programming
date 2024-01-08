@@ -25,7 +25,7 @@ class BaseGeometry(object):
         """
         A validator for the value
         """
-        if not isinstance(value, int):
+        if not type(value).__name__ == 'int':
             raise TypeError("{} must be an integer".format(name))
         else:
             if value <= 0:
