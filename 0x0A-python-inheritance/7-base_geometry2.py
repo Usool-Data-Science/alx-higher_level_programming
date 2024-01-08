@@ -22,7 +22,7 @@ ValueError: distance must be greater than 0
 Traceback (most recent call last):
 TypeError: name must be an integer
 
->>> bg.integer_validator("name", )
+>>> bg.integer_validator("name")
 Traceback (most recent call last):
 TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
