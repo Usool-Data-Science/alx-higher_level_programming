@@ -1,39 +1,24 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+#!/usr/bin/python3
+"""
+Check for inheritance
+"""
 
->>> bg = BaseGeometry()
 
->>> bg.integer_validator("my_int", 12)
+class BaseGeometry(object):
+    """
+    A blueprint for base geometry
+    """
+    def area(self):
+        """
+        Just raise NotImplementedError()
+        """
+        raise Exception("area() is not implemented")
 
->>> bg.integer_validator("width", 89)
-
->>> bg.integer_validator("name", "John")
-Traceback (most recent call last):
-TypeError: name must be an integer
-
->>> bg.integer_validator("age", 0)
-Traceback (most recent call last):
-ValueError: age must be greater than 0
-
->>> bg.integer_validator("distance", -4)
-Traceback (most recent call last):
-ValueError: distance must be greater than 0
-
->>> bg.integer_validator("name", 4.7)
-Traceback (most recent call last):
-TypeError: name must be an integer
-
->>> bg.integer_validator("name")
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
-
->>> bg.integer_validator("name", [])
-Traceback (most recent call last):
-TypeError: name must be an integer
-
->>> bg.integer_validator("name", 4, 7)
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
-
->>> bg.integer_validator("name", 1e23453)
-Traceback (most recent call last):
-TypeError: name must be an integer
+    def integer_validator(self, name, value):
+        """
+        A validator for the value
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
