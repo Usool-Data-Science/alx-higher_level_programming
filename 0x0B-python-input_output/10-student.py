@@ -22,4 +22,10 @@ class Student(object):
         """
         Prints the dictionary representation of Student object
         """
-        return self.__dict__
+        if attrs is None:
+            return self.__dict__
+        my_dict = {}
+        for k,v in self.__dict__.items():
+            if k in attrs:
+                my_dict[k] = v
+        return my_dict
