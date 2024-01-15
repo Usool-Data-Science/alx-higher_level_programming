@@ -5,14 +5,15 @@ inheriting from a base shape.
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     A blueprint for a rectangle.
     """
     def __init__(self, width, height, x=0, y=0, id=None):
-    """
-    Instantiates the rectangle object upon each call.
-    """
+        """
+        Instantiates the rectangle object upon each call.
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -88,4 +89,4 @@ class Rectangle(Base):
         for key in 'id, width, height, x, y'.split(', '):
             myDict[key] = getattr(self, key)
 
-         return myDict
+        return myDict
