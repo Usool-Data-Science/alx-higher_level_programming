@@ -1,1 +1,1 @@
-This is an introduction to Database Management.
+This is an introduction to Database Management (SQL).
