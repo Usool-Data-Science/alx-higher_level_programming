@@ -2,7 +2,7 @@
 import sys
 import MySQLdb
 
-connection = MySQLdb.connect(host='localhost:3306',
+connection = MySQLdb.connect(host='localhost',
                              user=sys.argv[1],
                              passwd=sys.argv[2],
                              db=sys.argv[3])
