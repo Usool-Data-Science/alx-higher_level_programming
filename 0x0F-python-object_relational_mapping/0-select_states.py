@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+"""
+Selects all states in the states table.
+"""
 import sys
 import MySQLdb
 
