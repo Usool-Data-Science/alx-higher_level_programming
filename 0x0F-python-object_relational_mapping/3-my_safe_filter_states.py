@@ -14,8 +14,8 @@ if __name__ == "__main__":
                                      db=sys.argv[3], port=3306)
         cursor = connection.cursor()
         cursor.execute("""SELECT `id`,`name` FROM states
-                       WHERE `name` = %s
-                       ORDER BY `id`""", (user_input,))
+                       WHERE `name` = '{}'
+                       ORDER BY `id`""", (user_input, ))
         all_states = cursor.fetchall()
         for state in all_states:
             print(state)
