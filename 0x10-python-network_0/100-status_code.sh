@@ -1,3 +1,3 @@
 #!/bin/bash
 # Returns the output code
-curl -Ls -w "%{http_code}\n" "$1"
+curl -s -o /dev/null -w "%{http_code}\n" "$1"
