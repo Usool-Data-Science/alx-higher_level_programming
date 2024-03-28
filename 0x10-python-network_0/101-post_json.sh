@@ -1,3 +1,3 @@
 #!/bin/bash
 #Sends Json to the server
-curl --json @my_json_0 "$1"
+curl -s -X POST -H 'Content-Type: application/json' -d "@$2" "$1"
